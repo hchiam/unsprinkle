@@ -21,8 +21,11 @@ const SearchInput = (props) => {
 
 const Wrapper = styled.div`
   position: relative;
-  min-width: 300px;
+  min-width: 150px;
   height: 2em;
+  @media (min-width: 500px) {
+    min-width: revert;
+  }
 `;
 
 const Input = styled.input`
@@ -32,6 +35,7 @@ const Input = styled.input`
   right: 0;
   bottom: 0;
   width: 100%;
+  height: 100%;
   background: var(--color-gray-100);
   /* Arbitrarily large value to ensure rounding */
   border-radius: 1000px;

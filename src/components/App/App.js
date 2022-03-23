@@ -13,10 +13,10 @@ const App = () => {
       <HeaderWrapper>
         <Header />
       </HeaderWrapper>
-      <main>
+      <Main>
         <Hero />
         <MainContent />
-      </main>
+      </Main>
       <Footer />
       <GlobalStyles />
     </>
@@ -27,6 +27,10 @@ const HeaderWrapper = styled.div`
   position: sticky;
   z-index: 2;
   top: 0;
+`;
+
+const Main = styled.main`
+  overflow: auto;
 `;
 
 export default App;
