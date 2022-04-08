@@ -1,11 +1,30 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
 const PhotoGridItem = ({ id, src, alt, tags }) => {
   return (
     <article>
       <Anchor href={`/photos/${id}`}>
-        <Image src={src} />
+        <picture>
+          <source
+            type="image/avif"
+            srcset={`
+              ${src} 1x,
+              ${src.replace(".jpg", "@2x.avif")} 2x,
+              ${src.replace(".jpg", "@3x.avif")} 3x,
+            `}
+          />
+          <source
+            type="image/jpg"
+            srcset={`
+              ${src} 1x,
+              ${src.replace(".jpg", "@2x.jpg")} 2x,
+              ${src.replace(".jpg", "@3x.jpg")} 3x,
+            `}
+          />
+          {/* <source> tags are invisible and act to swap the src attribute below: */}
+          <Image alt="" src={src} />
+        </picture>
       </Anchor>
       <Tags>
         {tags.map((tag) => (
