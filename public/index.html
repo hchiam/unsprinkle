@@ -9,12 +9,18 @@
     />
     <title>Unsprinkle</title>
     <style>
+      /* self-hosted version of Google-optimized web font: */
       @font-face {
         font-family: 'Inter';
         font-style: normal;
-        font-weight: 300 900;
-        font-display: swap;
-        src: url(/fonts/Inter-variable.woff2) format('woff2');
+        font-weight: 300 900; /* between 300 and 900 inclusive */
+        font-display: fallback;
+
+        /* 228 kB: (disable cache in Chrome in Network tab, filtered for fonts) */
+        /* src: url(/fonts/Inter-variable.woff2) format('woff2'); */
+
+        /* 38.1 kB: (disable cache in Chrome in Network tab, filtered for fonts) */
+        src: url(/fonts/Inter-variable_Google-optimized.woff2) format('woff2');
       }
     </style>
   </head>
