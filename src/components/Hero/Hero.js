@@ -23,7 +23,7 @@ const Hero = () => {
           "
         />
         <img
-          alt=""
+          alt="A cat in the darkness welcomes you as en example of the photos you'll see on this site!"
           src="/images/hero-img.jpg"
         />
       </HeroImage>
@@ -31,7 +31,7 @@ const Hero = () => {
         alt=""
         src="/images/hero-img.jpg"
       ></HeroImageJustImg> */}
-      <Swoop src="/swoop.svg" />
+      <Swoop alt="" src="/swoop.svg" />
     </Wrapper>
   );
 };
