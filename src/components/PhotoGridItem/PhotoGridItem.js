@@ -23,7 +23,7 @@ const PhotoGridItem = ({ id, src, alt, tags }) => {
             `}
           />
           {/* <source> tags are invisible and act to swap the src attribute below: */}
-          <Image alt="" src={src} />
+          <Image alt={alt} src={src} />
         </picture>
       </Anchor>
       <Tags>
